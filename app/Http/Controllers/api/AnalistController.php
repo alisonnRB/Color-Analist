@@ -7,45 +7,11 @@ use Illuminate\Http\Request;
 
 class AnalistController extends Controller
 {
-
-    public function index()
+    protected $image;
+    public function index(Request $request)
     {
-        return "pkp";
+        $this->image = $request->file('image');
+        
     }
 
-
-    public function create()
-    {
-        //
-    }
-
-
-    public function store(Request $request)
-    {
-        //
-    }
-
-
-    public function show($id)
-    {
-        //
-    }
-
-
-    public function edit($id)
-    {
-        //
-    }
-
-
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-
-    public function destroy($id)
-    {
-        //
-    }
 }
