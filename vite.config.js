@@ -1,7 +1,15 @@
-import { defineConfig } from 'vite';
-
-export default defineConfig({
-  build: {
-    outDir: 'dist',
-  },
-});
+// vite.config.js
+export default {
+    build: {
+      outDir: 'dist',
+      emptyOutDir: true,
+      target: 'esnext',
+      assetsDir: '',
+      rollupOptions: {
+        input: {
+          main: './resources/main.js'
+        }
+      }
+    }
+  }
+  
