@@ -1,14 +1,17 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Foundation\Bus\DispatchesJobs;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Routing\Controller as BaseController;
 use ColorThief\ColorThief;
 
-class AnalistController extends Controller
+class AnalistController extends BaseController
 {
+    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
     protected $image;
     protected $imageSize;
 
@@ -24,7 +27,6 @@ class AnalistController extends Controller
 
     protected $distintHex;
     protected $distintRGB;
-
 
     public function index(Request $request)
     {
